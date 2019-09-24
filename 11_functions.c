@@ -19,10 +19,9 @@ void copy(int *arr1, int *arr2, int len){
 int lenstr(char *str){
   int i = 0;
   int len = 0;
-  for(i = 0; i < sizeof(str); i++){
-    if (*(str + i) != '\0'){
+  while(*(str + i) != '\0'){
       len++;
-    }
+      i++;
   }
   return len;
 }
